@@ -60,7 +60,6 @@
             <button onclick="activateFriday()">Activate F.R.I.D.A.Y </button>
         </div>
     </section>
-    <!-- Your existing JavaScript here -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var video = document.getElementById('fridayVideo');
@@ -71,7 +70,6 @@
             var video = document.getElementById('fridayVideo');
             video.muted = true;
 
-            // Create a new instance of SpeechSynthesisUtterance
             var msg = new SpeechSynthesisUtterance("Activating Friday");
             msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name === 'Google UK English Female'; })[0];
             msg.pitch = 1.0;
@@ -80,7 +78,6 @@
             window.location.href = 'content.html';
         }
         
-        // Ensure voices are loaded
         speechSynthesis.onvoiceschanged = function() {
             var voices = speechSynthesis.getVoices();
         };
